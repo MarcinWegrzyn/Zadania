@@ -19,3 +19,4 @@ var triangle3Area = getTriangleArea(30, 45);
 console.log(triangle1Area);
 console.log(triangle2Area);
 console.log(triangle3Area);
+
