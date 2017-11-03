@@ -12,7 +12,7 @@ var newList = allNames.indexOf(newName);
 if (newList === -1) {
 	allNames.push(newName);
 } else {
-	console.log('Imię już istnieje');
+	console.log('Takie imię już istnieje');
 };
 
 console.log(allNames);
