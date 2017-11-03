@@ -1,5 +1,14 @@
 // scripts.js
 
-var name = prompt('Enter your name');
-alert('Hello, ' + name);
-console.log('Hello, ' + name);
+var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
+var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
+var allNames = femaleNames.concat(maleNames);
+console.log(allNames);
+
+var newName = 'Marian';
+var newList = allNames.indexOf(newName);
+
+if (newList === -1) {allNames.push(newName)}
+else {console.log('Imie już istnieje')};
+
+console.log(allNames);
