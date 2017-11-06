@@ -2,11 +2,15 @@
 
 function drawTree(x) { 
     for ( var i = 0 ; i < x ; i ++) {
+      var space="";
       var star ="";
         for ( var j = 0; j < i; j ++) {
-          var star = star += "*";
-        }
-      console.log(star);
+           star = star += "*";
+            for (var z = i ; z < x ; z ++) {
+             space = space += " ";
+            }
+         }
+      console.log(space + star);
     }
 }
 
