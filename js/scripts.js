@@ -1,5 +1,7 @@
 // scripts.js
 
-var name = prompt('Enter your name');
-alert('Hello, ' + name);
-console.log('Hello, ' + name);
+var buttonJs = document.getElementsByClassName( 'button' );
+
+for (var i = 0 ; i < buttonJs.length ; i++) {
+    alert(buttonJs[ i ].innerText);
+}
