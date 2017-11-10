@@ -1,5 +1,13 @@
 // scripts.js
 
-var name = prompt('Enter your name');
-alert('Hello, ' + name);
-console.log('Hello, ' + name);
+
+var list = document.getElementById('list'),
+    add = document.getElementById('addElem');
+
+add.addEventListener('click', function() {
+    var element = document.createElement('li'),
+        lgth = document.getElementsByTagName('li');
+    element.innerHTML = 'item ' + lgth.length;
+    list.appendChild(element);
+});
+
