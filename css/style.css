@@ -1,0 +1,8 @@
+.container {
+  padding: 10px 10px;
+}
+#winner {
+  text-align: center;
+  font-size: 50px;
+  display: none;
+}
