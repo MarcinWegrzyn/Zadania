@@ -9,6 +9,7 @@
   height: 480px;
   overflow: hidden;
   border: 2px solid red;
+  position: relative;
 } 
 
 ul {
@@ -26,4 +27,22 @@ li {
 h1 {
   text-align: center;
   color: red;
+}
+
+
+
+.left {
+  float: left;
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+.right {
+  float: right;
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
 }
