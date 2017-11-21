@@ -1,16 +1,11 @@
 $(function(){
   
   var carouselList = $("#carousel ul");
-  var slideInterval = setInterval(changeSlide, 1000);
+  var slideInterval = setInterval(changeSlide, 3000);
 
   $("#carousel").mouseover(function() {
-    clearInterval(slideInterval);
-   });
-
-  $("#carousel").mouseout(function() {
-    slideInterval(); 
+  clearInterval(slideInterval);
   });
-
 
   function changeSlide(){
     carouselList.animate({'marginLeft':-640}, 500, moveFirstSlide);
@@ -34,7 +29,6 @@ $(function(){
     }
   }
 
-
   $("#right").click(function(){
     changeSlide();
   });
@@ -42,8 +36,6 @@ $(function(){
   $("#left").click(function(){
     slideBack();
   });
-
-
 });
 
 
