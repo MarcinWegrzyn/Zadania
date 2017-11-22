@@ -1,20 +1,20 @@
 // scripts.js
-var span = $("span");
+function Phone(brand, price, color, year) {
+  this.brand = brand;
+  this.price = price;
+  this.color = color;
+  this.year = year;
 
-span.each(function(index, element) {
-  $("span:even").css('color', 'red');
-});
+}
 
-var paragraphs = $('p');
-paragraphs.each(function(index, element) {
-  var button = '<button class="btn" data-tmp="' + index + '">Click me</button>';
-  $(element).append(button);
-});
+Phone.prototype.printInfo = function() {
+    console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + ", it was made in " + this.year + ".");
+}
 
-$("button").click(function(){
-    alert($(this).attr("data-tmp"));
-});
+var GalaxyS7 = new Phone ('Samsung', 2000, 'blue', 2015),
+    IphoneX = new Phone ('Apple', 1000000, 'black', 2017),
+    N3210 = new Phone ('Nokia', 200, 'red', 2000); // Czy var może być liczbą? Jeżeli tak to czy daje ją jako string '3210' ?
 
-
-
-
+N3210.printInfo();
+IphoneX.printInfo();
+GalaxyS7.printInfo();
