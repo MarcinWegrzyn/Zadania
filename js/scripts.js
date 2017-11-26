@@ -1,20 +1,17 @@
 // scripts.js
-var span = $("span");
-
-span.each(function(index, element) {
-  $("span:even").css('color', 'red');
-});
-
-var paragraphs = $('p');
-paragraphs.each(function(index, element) {
-  var button = '<button class="btn" data-tmp="' + index + '">Click me</button>';
-  $(element).append(button);
-});
-
-$("button").click(function(){
-    alert($(this).attr("data-tmp"));
-});
-
-
-
-
+function Button(text) {
+  this.text = text || 'Hello';
+}
+Button.prototype = {
+	create: function() {
+    var self = this;
+		this.$element = $('<button>');
+    this.$element.text(this.text);
+    this.$element.click(function() {
+	    alert(self.text);
+    });
+    $('body').append(this.$element);
+	}
+}
+var btn1 = new Button('Hello!');
+btn1.create();
