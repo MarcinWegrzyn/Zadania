@@ -1,20 +1,20 @@
 // scripts.js
-var span = $("span");
-
-span.each(function(index, element) {
-  $("span:even").css('color', 'red');
+var url = 'http://api.icndb.com/jokes/random';
+var button = document.getElementById('get-joke');
+button.addEventListener('click', function(){
+  getJoke();
 });
 
-var paragraphs = $('p');
-paragraphs.each(function(index, element) {
-  var button = '<button class="btn" data-tmp="' + index + '">Click me</button>';
-  $(element).append(button);
-});
+var paragraph = document.getElementById('joke');
 
-$("button").click(function(){
-    alert($(this).attr("data-tmp"));
-});
+function getJoke() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.addEventListener('load', function(){
+    var response = JSON.parse(xhr.response);
+    paragraph.innerHTML = response.value.joke;
+  });
+  xhr.send();
+}
 
-
-
-
+var response = JSON.parse(xhr.response);
